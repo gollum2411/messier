@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -14,7 +14,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DataBaseHandler extends SQLiteOpenHelper {
 	// Step 2: Set a name to your database
-		private static final String DATABASE_NAME = "messier";
+		private static final String DATABASE_NAME = "messier_iteso.db";
+		@SuppressLint("SdCardPath")
 		private static final String DATABASE_PATH = "/data/data/com.example.messieriteso/databases/";
 		// Step 3: Set a version
 		private static final int DATABASE_VERSION = 1;

@@ -27,7 +27,7 @@ public class BinderData extends BaseAdapter {
 		
 		this.objectCollection = ob;
 		
-		inflater = (LayoutInflater) act
+		this.inflater = (LayoutInflater) act
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 	
@@ -57,7 +57,7 @@ public class BinderData extends BaseAdapter {
 	      holder = new ViewHolder();
 	     
 	      holder.tvMessier = (TextView)vi.findViewById(R.id.tvMessier); // city name
-	      holder.tvNgc = (TextView)vi.findViewById(R.id.tvNgc); // city weather overview
+	      holder.tvCommon = (TextView)vi.findViewById(R.id.tvCommon); // city weather overview
 	      holder.tvObjectImage =(ImageView)vi.findViewById(R.id.list_image); // thumb image
 	 
 	      vi.setTag(holder);
@@ -69,11 +69,11 @@ public class BinderData extends BaseAdapter {
 	      // Setting all values in listview
 	      
 	      holder.tvMessier.setText(objectCollection.get(position).getMessier());
-	      holder.tvNgc.setText(objectCollection.get(position).getNgc());
+	      holder.tvCommon.setText(objectCollection.get(position).getCommon());
 	     
 	      
 	      //Setting an image
-	      String uri = "drawable/"+ objectCollection.get(position).getPicture_id();
+	      String uri = "drawable/messier" + objectCollection.get(position).getPicture_id();
 	      int imageResource = vi.getContext().getApplicationContext().getResources().getIdentifier(uri, null, vi.getContext().getApplicationContext().getPackageName());
 	      Drawable image = vi.getContext().getResources().getDrawable(imageResource);
 	      holder.tvObjectImage.setImageDrawable(image);
@@ -87,7 +87,7 @@ public class BinderData extends BaseAdapter {
 	static class ViewHolder{
 		
 		TextView tvMessier;
-		TextView tvNgc;
+		TextView tvCommon;
 		ImageView tvObjectImage;
 	}
 	

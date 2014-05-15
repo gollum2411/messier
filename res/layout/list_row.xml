@@ -55,7 +55,7 @@
         android:typeface="sans" />
 
     <TextView
-        android:id="@+id/tvNgc"
+        android:id="@+id/tvCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvMessier"
